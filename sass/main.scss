@@ -1,0 +1,113 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+   display: none !important;
+}
+
+// Sass variables
+$primary-color: black;
+$primary-color-2: lightgray;
+$font-color: black;
+$border-color: #5CA4D7;
+// Sass imports
+// Sass mixins
+@mixin border-box {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+// selectors
+* {
+   @include border-box;
+}
+
+header {
+   background-color: lightgray;
+   border-bottom: 1px solid gray;
+}
+
+.container {
+   max-width: 50%;
+}
+
+.table-header {
+   text-align: center;
+   margin-bottom: 40px;
+   margin-top: 40px;
+}
+
+.table-container {
+   margin: 30px 0;
+   padding-bottom: 40px;
+   h1 {
+      font-family: 'Sansita One', cursive;
+   }
+   img {
+      max-width: 70px;
+      max-height: 70px;
+   }
+}
+
+table {
+   // border: 1px solid black;
+   border-collapse: collapse;
+   padding: 10px;
+   margin: 0 20%;
+   width: 60%;
+   font-family: 'Merriweather', serif;
+   tr {
+      border-collapse: collapse;
+      border-bottom: none;
+      font-size: 20px;
+      padding: 10px;
+   }
+   td {
+      border-collapse: collapse;
+      font-size: 18px;
+      padding: 10px;
+   }
+   th {
+      border-collapse: collapse;
+      font-size: 20px;
+      padding: 10px;
+      text-decoration: underline;
+      background-color: #69ace0;
+   }
+}
+
+.product-color {
+   display: inline-block;
+   height: 25px;
+   width: 25px;
+   border: 1px solid black;
+   border-radius: 4px;
+   margin-right: 8px;
+}
+
+.form-container {
+   padding-top: 30px;
+   border-top: 3px solid lightgray;
+}
+
+input.ng-invalid {
+   background-color: #fdd;
+}
+
+input.ng-valid {
+   background-color: #a2f9bb;
+}
+
+button {
+   margin: 10px auto;
+}
+
+.footer {
+   height: 100px;
+   background-color: lightgray;
+   border-top: 1px solid gray;
+   margin-top: 65px;
+}

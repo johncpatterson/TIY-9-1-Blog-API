@@ -1,0 +1,23 @@
+{
+  "name": "tiy_9_1_blog_api",
+  "version": "1.0.0",
+  "description": "API to get and post blogs and also create comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johncpatterson/TIY-9-1-Blog-API.git"
+  },
+  "keywords": [
+    "API",
+    "blog"
+  ],
+  "author": "John Patterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johncpatterson/TIY-9-1-Blog-API/issues"
+  },
+  "homepage": "https://github.com/johncpatterson/TIY-9-1-Blog-API#readme"
+}
