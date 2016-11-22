@@ -1,4 +1,4 @@
-# TIY-8-3-Node Shop Mongo
+# TIY-9-1-Blog API
 
 
-The Iron Yard week 8, day 3 assignment. This assignment added onto the first one this week by using [MongoDB] (https://www.mongodb.com/) as the data store instead of a local array.  [Mongoose] (http://mongoosejs.com/) was used as well to make working with MongoDB easier.  I used [mLab] (https://mlab.com/) for the MongoDB hosting.  
+The Iron Yard week 9, day 1 assignment. The goal of this assignment was to create a simple API endpoint for creating a blog post, getting all blog posts and adding a comment to a blog post.

@@ -1,7 +1,7 @@
 (function() {
    angular
       .module('nodeshop')
-      .controller('UserController', function UserController(users) {
+      .controller('UserController', function UserController(blogs) {
          let vm = this;
 
          let promise = users.getUsers();
