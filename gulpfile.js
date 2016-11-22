@@ -3,7 +3,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-// const notify = require("gulp-notify");
+const notify = require("gulp-notify");
+const plumber = require('gulp-plumber');
 
 // const babel = require('gulp-babel');
 // const eslint = require('gulp-eslint');
@@ -26,25 +27,30 @@ const browserSync = require('browser-sync').create();
 // });
 
 gulp.task('sass', function() {
-    return gulp.src('./sass/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+   return gulp.src('./sass/*.scss')
+      .pipe(sass().on('error', function() {
+         notify("You have a Sass error").write('');
+      }))
+      .pipe(plumber({
+         errorHandler: notify.onError('Error: <%= error.message %>')
+      }))
+      .pipe(gulp.dest('./css'))
+      .pipe(browserSync.reload({
+         stream: true
+      }))
 });
 
 gulp.task('browserSync', function() {
-    browserSync.init({
-        server: {
-            baseDir: ''
-        },
-    })
+   browserSync.init({
+      server: {
+         baseDir: ''
+      },
+   })
 })
 
 // gulp.src("./src/test.ext")
 //   .pipe(notify("Hello Gulp!"));
 
-gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch(['*.html', './js/*.js', './sass/*.scss'], ['sass']);
+gulp.task('watch', ['browserSync', 'sass', 'notify'], function() {
+   gulp.watch(['*.html', './js/*.js', './sass/*.scss'], ['sass']);
 });

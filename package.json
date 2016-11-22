@@ -21,12 +21,14 @@
   },
   "homepage": "https://github.com/johncpatterson/TIY-9-1-Blog-API#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-watch": "^4.3.11",
     "body-parser": "^1.15.2",
+    "browser-sync": "^2.18.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.11",
     "mongoose": "^4.6.8"
   }
 }
